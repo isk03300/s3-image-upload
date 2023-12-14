@@ -39,7 +39,7 @@ class FileUploadResource(Resource) :
         try :
             s3.upload_fileobj(file, Config.S3_BUCKET, 
                               file.filename, 
-                              ExtraArgs = {'ACL' : 'public-read', 'ContentType' : 'image/jpg'} )
+                              ExtraArgs = {'ACL' : 'public-read', 'ContentType' : 'image/jpeg'} )
 
         except Exception as e :
             print(e)
